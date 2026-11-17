@@ -1,0 +1,4 @@
+backup-*/
+netcheck/
+*.apk
+.DS_Store
