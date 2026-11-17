@@ -1,5 +1,24 @@
 # CleanYourBlock
 
+> **Why this exists.** I work in the Android/iOS security space and have seen what gets left on some
+> Android devices when they ship to consumers. Sometimes it's a factory test app that leaves some holes
+> open, sometimes it's blatant malware in an Android TV box, and sometimes it's a firmware updater
+> (*cough* ADUPS) that tracks, logs, and has remote command and control from the country of origin. My
+> colleague exposed the ADUPS firmware OTA issues in a BLU phone sold through Amazon in 2016, and I found
+> that my KONKR Pocket Block (an Ayaneo brand) was also using the same provider. The threat model is vastly
+> different, as this device won't have a SIM or be used for most of my personal services, but I still
+> don't want that on a device that may connect to my home network and travel with me. This is a first go
+> at a [cleanyourtv](https://github.com/Gathin23/cleanyourtv)-style repo for removing the OEM software from
+> these devices and sticking to FOSS or paid software that I opt in to.
+>
+> **⚠️ A warning.** I found a fun "feature" while creating this prompt: by default the device opens
+> network ADB on port 5555 at every boot, separate from Android's Wireless debugging setting. That means
+> if you leave USB Debugging on while you're connected to a network, anyone on the same network can
+> connect and request access; a computer you've already approved gets in with no prompt, and one
+> mis-tapped "Allow" hands over full control. This is built into the system software and can't be
+> disabled permanently, only on each reboot. So be careful: **disable USB Debugging after you finish
+> customizing**, or only connect the device to Wi-Fi in trusted spaces.
+
 **Turn a KONKR Pocket Block (or a similar Android handheld) into a clean, quiet retro-gaming device,
 guided step by step by a coding assistant.** Strip the vendor launcher, OTA client and factory junk,
 set the frontend you want as home, copy your ROMs over from your computer, and remap the extra buttons.
