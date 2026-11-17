@@ -4,7 +4,8 @@
 > Android devices when they ship to consumers. Sometimes it's a factory test app that leaves some holes
 > open, sometimes it's blatant malware in an Android TV box, and sometimes it's a firmware updater
 > (*cough* ADUPS) that tracks, logs, and has remote command and control from the country of origin. My
-> colleague exposed the ADUPS firmware OTA issues in a BLU phone sold through Amazon in 2016, and I found
+> colleague exposed the ADUPS firmware OTA issues in a BLU phone sold through Amazon in 2016
+> ([The New York Times](https://www.nytimes.com/2016/11/16/us/politics/china-phones-software-security.html)), and I found
 > that my KONKR Pocket Block (an Ayaneo brand) was also using the same provider. The threat model is vastly
 > different, as this device won't have a SIM or be used for most of my personal services, but I still
 > don't want that on a device that may connect to my home network and travel with me. This is a first go
